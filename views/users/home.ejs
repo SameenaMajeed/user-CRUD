@@ -1,0 +1,52 @@
+<%- include ('../layout/homeheader.ejs') %>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">COFFIEE CUP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="/views/menu.png">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-right">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="button d-flex" action="/logout" method="post">
+            <button class="butto btn btn-outline-danger" type="submit">Logout</button>
+        </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="feature-box">
+            <h1>Coffee is a language in itself</h1>
+            <p>Coffee, beverage brewed from the roasted and ground seeds of the tropical evergreen coffee plants of African origin.
+               Coffee is one of the three most popular beverages in the world (alongside water and tea) and one of the most profitable international commodities.</p>
+            <a href="#" class="btn-one">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="/views/3.jpg" class="feature-img">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <%- include ('../layout/footer.ejs') %>

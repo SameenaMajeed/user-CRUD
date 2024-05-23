@@ -1,0 +1,24 @@
+
+<%- include ('../layout/header.ejs') %>
+
+  <div class="container-fluid">
+    <h1 class="heading">WELCOME TO LOGIN PAGE</h1>
+    <form class="mx-auto" action="/forget" method="post">
+      <h1 class="text-center">FORGET PASSWORD</h1>
+      <% if(typeof message !=='undefined' ){ %>
+        <h4 style="color: red;font-weight: bold; font-size: medium;">
+          <%= message %>
+        </h4>
+        <% } %>
+          <div class="mb-3 mt-5">
+            <label for="exampleInputEmail1" class="form-label">User Name</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email" required>
+          </div>
+          <input type="submit" value="Send reset Link" class="btn btn-primary mt-5">
+    </form>
+  </div>
+
+
+
+  <%- include ('../layout/footer.ejs') %>

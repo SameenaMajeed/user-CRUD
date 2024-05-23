@@ -1,0 +1,48 @@
+
+
+<%- include('../layout/header.ejs') %>
+
+  <div class="container-fluid">
+    <h1 class="heading">ADD NEW USER</h1>
+    <form class="mx-auto" action="" method="post" enctype="multipart/form-data">
+      <h1 class="text-center">New User Registration</h1>
+
+      <div class="mb-3 mt-5">
+        <label for="exampleInputEmail1" class="form-label">User Name</label>
+        <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required class="form-control"
+          id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+        <input type="text" name="mobile" placeholder="Enter your mobile" required class="form-control"
+          id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Photo</label>
+        <input type="file" name="image" required class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="password" placeholder="Enter password" required class="form-control" id="exampleInputPassword1">
+      </div>
+      <input type="submit" value="Add User" class="btn btn-primary mt-5">
+
+      <br><br>
+      <% if(typeof message !=='undefined' ){ %>
+        <p style="color:rgb(128, 23, 0);font-weight: bold;">
+          <%= message %>
+        </p>
+        <% } %>
+
+        <div class="mb-3 mt-5">
+          <p><a href="/admin/dashboard" class="link-underline-light">Go Back to DashBoard Page</a></p>
+        </div>
+      </form>
+  </div>
+
+  <%- include('../layout/footer.ejs') %>

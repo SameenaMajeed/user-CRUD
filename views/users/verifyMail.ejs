@@ -1,0 +1,21 @@
+<%- include('../layout/header.ejs') %>
+
+    <div class="d-flex justify-content-center align-items-center container">
+        <div class="card py-5 px-3">
+            <h3 class="m-0"> Mobile Phone Verification</h3><span class="mobile-text">Enter the code we just send on your
+                mobile phone</span>
+            <form action="/verifyMail" method="post">
+                <input type="hidden" name="userId" value="<%= userId %>">
+                <div class="d-flex flex-row mt-5">
+                    <input type="text" name="otp" class="form-control" autofocus="">
+                </div>
+                <input type="submit" value="Verify" class="btn btn-primary mt-5">
+            </form>
+            <div class="text-center mt-3">
+                <span class="d-block mobile-text">Don't receive the code?</span>
+                <a href="/resendOtp/<%= userId %>" class="font-weight-bold text-danger cursor">Resend</a>
+            </div>
+        </div>
+    </div>    
+
+<%- include('../layout/footer.ejs') %>

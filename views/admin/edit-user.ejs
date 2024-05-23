@@ -1,0 +1,38 @@
+<%- include ('../layout/header.ejs') %>
+
+<div class="container-fluid">
+    <h1 class="heading">WELCOME TO EDIT USER PAGE</h1>
+    <form class="mx-auto" action="" method="post">
+      <h1 class="text-center">Edit User</h1>
+      <% if(typeof message !== 'undefined' ){ 
+        %>
+        <h4 style="color: red;font-weight: bold; font-size: medium;">
+          <%= message %>
+        </h4>
+        <% 
+        } 
+      %>
+          <div class="mb-3 mt-5">
+            <input type="name" class="form-control" name="name" placeholder="Enter Name" value="<%= user.name %>" required>
+          </div>
+          <div class="mb-3 mt-5">
+            <input type="email" class="form-control" name="email"  placeholder="Enter Email"  value="<%= user.email %>" required>
+          </div>
+          <div class="mb-3 mt-5">
+            <input type="text" class="form-control" name="mobile" placeholder="Enter Mobile"  value="<%= user.mobile %>" required>
+          </div>
+          <div class="mb-3 mt-5">
+            <label for="exampleInputVerify" class="form-label">Verified</label>
+            <input type="radio"  name="verify" value="1" <% if(user.is_varified == 1 ){ %> checked <% }%>>
+              <label for="exampleInputVerify" class="form-label">Unverified</label>
+            <input type="radio"  name="verify" value="0" <% if(user.is_varified == 0 ){ %> checked <% }%>>
+          </div>
+          <input type="hidden" name="id" value="<%= user._id %>">
+          <input type="submit" value="Update User" class="btn btn-primary mt-5">
+          <div class="mb-3 mt-5">
+          <a href="/admin/">Back To DashBoard</a>
+          </div>
+    </form>
+  </div>
+
+<%- include ('../layout/footer.ejs') %>

@@ -1,0 +1,52 @@
+<%- include ('../layout/header.ejs') %>
+
+<div class="container-fluid">
+    <h1 class="heading">WELCOME TO LOGIN PAGE</h1>
+    <form class="mx-auto" action="/admin/login" method="post">
+      <h1 class="text-center">Admin Login</h1>
+      <% if(typeof message !== 'undefined' ){ 
+        %>
+        <h4 style="color: red;font-weight: bold; font-size: medium;">
+          <%= message %>
+        </h4>
+        <% 
+      } %>
+          <div class="mb-3 mt-5">
+            <label for="exampleInputEmail1" class="form-label">User Name</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+              placeholder="Enter password" required>
+          </div>
+          <input type="submit" value="Login" class="btn btn-primary mt-5">
+    </form>
+  </div>
+
+<!-- <%
+
+    if(typeof message !== 'undefined'){
+
+        %>
+        
+        <h3><%= message %></h3>
+        
+        <%
+    }
+
+%> -->
+
+
+<!-- <form action="" method="post">
+
+    <input type="email" name="email" placeholder="Enter your Email">
+    <br><br>
+    <input type="password" name="password" placeholder="Enter password">
+    <br><br>
+    <input type="submit" value="Login">
+
+</form> -->
+
+<%- include ('../layout/footer.ejs') %>
